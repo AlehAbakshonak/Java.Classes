@@ -1,12 +1,32 @@
 package com.epam.abak.javaClasses.Mobile;
 
 public class Phone {
+
+   @Override
+   public String toString() {
+      return "Phone{" +
+            "ID = " + ID +
+            ", debit = " + debit +
+            ", credit = " + credit +
+            ", cityCalls = " + cityCalls +
+            ", intercityCalls = " + intercityCalls +
+            ", number = " + number +
+            ", tariff = " + tariff +
+            ", name = '" + name + '\'' +
+            ", surname = '" + surname + '\'' +
+            ", patronymic = '" + patronymic + '\'' +
+            ", address = '" + address + '\'' +
+            ", creditCard = '" + creditCard + '\'' +
+            '}';
+   }
+
    private int ID;
    private int debit;
    private int credit;
    private int cityCalls;
    private int intercityCalls;
    private int number;
+   public Tariff tariff;
    private String name;
    private String surname;
    private String patronymic;
@@ -18,7 +38,9 @@ public class Phone {
                 int credit,
                 int cityCalls,
                 int intercityCalls,
-                int number, String name,
+                int number,
+                Tariff tariff,
+                String name,
                 String surname,
                 String patronymic,
                 String address,
@@ -29,6 +51,7 @@ public class Phone {
       this.cityCalls = cityCalls;
       this.intercityCalls = intercityCalls;
       this.number = number;
+      this.tariff = tariff;
       this.name = name;
       this.surname = surname;
       this.patronymic = patronymic;
@@ -45,7 +68,6 @@ public class Phone {
             phone.getNumber()
       );
    }
-
 
    public void setID(int id) {
       this.ID = id;
